@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: hkm-replication
+Version: 0.0.1
+Summary: Intermediary Asset Pricing: HKM (2017) replication
+Requires-Python: >=3.10
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: sqlalchemy
+Requires-Dist: psycopg2-binary
+Requires-Dist: pandas-datareader
+Requires-Dist: requests
+Requires-Dist: statsmodels
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: mypy>=1.5; extra == "dev"
+Requires-Dist: ruff>=0.1; extra == "dev"
