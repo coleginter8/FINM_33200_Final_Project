@@ -1,0 +1,87 @@
+dealer_name,parent_holdco_name,permno,permco,gvkey,start_date,end_date,confidence,notes
+ABN AMRO Inc.,,,,,1998-01-01,2007-12-31,foreign_excluded,foreign or non-listed
+"Aubrey G. Lanston & Co., Inc.",,,,,1960-01-01,2000-12-31,foreign_excluded,foreign or non-listed
+BMO Capital Markets Corp.,,,,,2011-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+BMO Nesbitt Burns Corp.,,,,,2002-01-01,2008-12-31,foreign_excluded,foreign or non-listed
+BNP Paribas Securities Corp.,,,,,2000-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+BT Securities Corp.,BANKERS TRUST NEW YORK CORP,48354.0,20266.0,002029,1990-01-01,1999-12-31,medium,"comnam=BANKERS TRUST NY CORP, score=81"
+Banc of America Securities LLC,BANK OF AMERICA CORP,59408.0,3151.0,007647,1998-01-01,2013-12-31,high,"comnam=N C N B CORP, score=100"
+Bank of America N.T. & S.A.,BANKAMERICA CORP,58827.0,437.0,002024,1960-01-01,1998-12-31,high,"comnam=BANKAMERICA CORP, score=100"
+"Bank of Nova Scotia, New York Agency",,,,,2011-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+"Bank of Tokyo Securities (USA), Inc.",,,,,1988-01-01,1996-12-31,foreign_excluded,foreign or non-listed
+Bankers Trust Company,BANKERS TRUST NEW YORK CORP,48354.0,20266.0,002029,1960-01-01,1999-12-31,medium,"comnam=BANKERS TRUST NY CORP, score=81"
+Barclays Capital Inc.,,,,,1998-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+"Bear, Stearns & Co., Inc.",BEAR STEARNS COMPANIES INC,68304.0,20282.0,011818,1985-01-01,2008-12-31,high,"comnam=BEAR STEARNS COMPANIES INC, score=100"
+Bevill Bresler & Schulman Asset Management Corp.,,,,,1980-01-01,1986-12-31,foreign_excluded,foreign or non-listed
+"Briggs, Schaedle & Co., Inc.",,,,,1960-01-01,1989-12-31,foreign_excluded,foreign or non-listed
+"CRT Government Securities, Ltd.",,,,,1988-01-01,1996-12-31,foreign_excluded,foreign or non-listed
+CS First Boston Corp.,,,,,1993-01-01,2006-12-31,foreign_excluded,foreign or non-listed
+Cantor Fitzgerald & Co.,,,,,2006-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+"Carroll McEntee & McGinley, Incorporated",,,,,1980-01-01,1999-12-31,foreign_excluded,foreign or non-listed
+Chase Securities Inc.,CHASE MANHATTAN CORP,41718.0,20432.0,002943,1990-01-01,2000-12-31,high,"comnam=CHASE MANHATTAN CORP, score=100"
+Chemical Bank,CHEMICAL BANKING CORP,47896.0,20436.0,002968,1960-01-01,1996-12-31,high,"comnam=CHEMICAL BANKING CORP, score=100"
+Chemical Securities Inc.,CHEMICAL BANKING CORP,47896.0,20436.0,002968,1992-01-01,1996-12-31,high,"comnam=CHEMICAL BANKING CORP, score=100"
+"Citicorp Securities, Inc.",CITICORP,47079.0,20456.0,003066,1990-01-01,1998-12-31,high,"comnam=CITICORP, score=100"
+Citigroup Global Markets Inc.,CITIGROUP INC,70519.0,20483.0,003243,1998-01-01,2013-12-31,high,"comnam=CITIGROUP INC, score=100"
+Continental Illinois National Bank,CONTINENTAL ILLINOIS CORP,66886.0,25774.0,,1960-01-01,1994-12-31,medium,"comnam=CONTINENTAL ILLINOIS HLDG CORP, score=89"
+Credit Suisse Securities (USA) LLC,,,,,1993-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+Daiwa Capital Markets America Inc.,,,,,1986-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+Daiwa Securities America Inc.,,,,,1986-01-01,2001-12-31,foreign_excluded,foreign or non-listed
+Dean Witter Reynolds Inc.,DEAN WITTER DISCOVER & CO,78946.0,29752.0,027867,1960-01-01,1997-12-31,high,"comnam=DEAN WITTER DISCOVER & CO, score=100"
+Deutsche Bank Securities Inc.,,,,,1990-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+Discount Corp. of New York,,,,,1960-01-01,1992-12-31,foreign_excluded,foreign or non-listed
+"Donaldson, Lufkin & Jenrette Securities Corp.",DONALDSON LUFKIN & JENRETTE INC,82299.0,30964.0,061840,1986-01-01,2000-12-31,medium,"comnam=DONALDSON LUFKIN & JEN INC NEW, score=83"
+"Drexel Burnham Lambert Group, Inc.",DREXEL BURNHAM LAMBERT GROUP,,,,1976-01-01,1990-12-31,low,no CRSP name match
+"EF Hutton & Company, Inc.",HUTTON E F GROUP INC,55175.0,25422.0,005793,1960-01-01,1988-12-31,high,"comnam=HUTTON E F & CO, score=100"
+Eastbridge Capital Inc.,,,,,1988-01-01,1996-12-31,foreign_excluded,foreign or non-listed
+First Boston (Credit Suisse First Boston),FIRST BOSTON INC,64952.0,1650.0,004684,1960-01-01,1993-12-31,high,"comnam=FIRST BOSTON INC, score=100"
+First Boston Corp.,FIRST BOSTON INC,64952.0,1650.0,004684,1960-01-01,1988-12-31,high,"comnam=FIRST BOSTON INC, score=100"
+"First Chicago Capital Markets, Inc.",FIRST CHICAGO CORP,53858.0,20712.0,004689,1991-01-01,1998-12-31,high,"comnam=FIRST CHICAGO CORP, score=100"
+First National Bank of Chicago,FIRST CHICAGO CORP,53858.0,20712.0,004689,1960-01-01,1995-12-31,high,"comnam=FIRST CHICAGO CORP, score=100"
+Fuji Securities Inc.,,,,,1989-01-01,2000-12-31,foreign_excluded,foreign or non-listed
+"Goldman Sachs Government Securities, Inc.",,,,,1986-01-01,1999-12-31,foreign_excluded,foreign or non-listed
+"Goldman, Sachs & Co.",GOLDMAN SACHS GROUP INC,86868.0,35048.0,114628,1999-01-01,2013-12-31,high,"comnam=GOLDMAN SACHS GROUP INC, score=100"
+"Greenwich Capital Markets, Inc.",,,,,1990-01-01,2010-12-31,foreign_excluded,foreign or non-listed
+HSBC Markets (USA) Inc.,,,,,1992-01-01,1999-12-31,foreign_excluded,foreign or non-listed
+HSBC Securities (USA) Inc.,,,,,1999-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+Harris Government Securities Inc.,,,,,1986-01-01,1995-12-31,foreign_excluded,foreign or non-listed
+Harris Nesbitt Corp.,,,,,2003-01-01,2009-12-31,foreign_excluded,foreign or non-listed
+"Industrial Bank of Japan Securities, Inc.",,,,,1988-01-01,2000-12-31,foreign_excluded,foreign or non-listed
+Irving Trust Company,IRVING BANK CORP,46842.0,24906.0,006186,1960-01-01,1988-12-31,high,"comnam=IRVING BANK CORP, score=100"
+J.P. Morgan Securities LLC,JPMORGAN CHASE & CO,47896.0,20436.0,002968,1960-01-01,2013-12-31,high,"comnam=JPMORGAN CHASE & CO, score=100"
+"Jefferies & Company, Inc.",JEFFERIES GROUP INC,46392.0,6496.0,006239,2009-01-01,2013-12-31,high,"comnam=JEFFERIES GROUP INC, score=100"
+"Kidder, Peabody & Co. Incorporated",GENERAL ELECTRIC CO,12060.0,20792.0,005047,1986-01-01,1994-12-31,high,"comnam=GENERAL ELECTRIC CO, score=100"
+LBI Government Securities Inc.,AMERICAN EXPRESS CO,59176.0,90.0,001447,1985-01-01,1990-12-31,high,"comnam=AMERICAN EXPRESS CO, score=100"
+"LF Rothschild, Unterberg, Towbin, Inc.",LF ROTHSCHILD HOLDINGS INC,69083.0,25825.0,012223,1986-01-01,1988-12-31,high,"comnam=ROTHSCHILD L F UNTERBERG TOBIN, score=100"
+Lehman Brothers Inc.,AMERICAN EXPRESS CO,59176.0,90.0,001447,1984-01-01,1994-12-31,high,"comnam=AMERICAN EXPRESS CO, score=100"
+Lehman Brothers Inc.,LEHMAN BROTHERS HOLDINGS INC,80599.0,21606.0,030128,1994-01-01,2008-12-31,high,"comnam=LEHMAN BROTHERS HOLDINGS INC, score=100"
+Lloyds Bank N.A.,,,,,1985-01-01,1995-12-31,foreign_excluded,foreign or non-listed
+Manufacturers Hanover Securities Corporation,MANUFACTURERS HANOVER CORP,48223.0,21150.0,007003,1986-01-01,1991-12-31,high,"comnam=MANUFACTURERS HANOVER CORP, score=100"
+Marine Midland Bank,,,,,1960-01-01,1992-12-31,foreign_excluded,foreign or non-listed
+"Merrill Lynch, Pierce, Fenner & Smith Incorporated",MERRILL LYNCH & CO INC,52919.0,21190.0,007267,1971-01-01,2008-12-31,high,"comnam=MERRILL LYNCH & CO INC, score=100"
+"Merrill Lynch, Pierce, Fenner & Smith Incorporated",BANK OF AMERICA CORP,59408.0,3151.0,007647,2009-01-01,2013-12-31,high,"comnam=N C N B CORP, score=100"
+"Mitsubishi UFJ Securities (USA), Inc.",,,,,2002-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+Mizuho Securities USA Inc.,,,,,2002-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+Morgan Guaranty Trust Company,JP MORGAN & CO INC,48071.0,21222.0,007562,1960-01-01,2000-12-31,high,"comnam=MORGAN J P & CO INC, score=100"
+Morgan Stanley & Co. LLC,MORGAN STANLEY,69032.0,21224.0,012124,1986-01-01,2013-12-31,high,"comnam=MORGAN STANLEY GROUP INC, score=100"
+National Westminster Bank PLC,,,,,1985-01-01,2000-12-31,foreign_excluded,foreign or non-listed
+"NationsBanc Capital Markets, Inc.",NATIONSBANK CORP,59408.0,3151.0,007647,1996-01-01,1998-12-31,high,"comnam=NATIONSBANK CORP, score=100"
+"Nomura Securities International, Inc.",,,,,1986-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+PaineWebber Incorporated,PAINE WEBBER GROUP INC,54463.0,21359.0,008299,1960-01-01,2000-12-31,high,"comnam=PAINE WEBBER INC, score=100"
+"Prudential-Bache Securities, Inc.",PRUDENTIAL FINANCIAL INC,64582.0,3541.0,017098,1981-01-01,2000-12-31,medium,"comnam=PRUDENTIAL FINL SVCS CORP, score=75"
+"RBC Capital Markets, LLC",,,,,2009-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+RBS Securities Inc.,,,,,2000-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+"Refco Securities, LLC",REFCO INC,90848.0,47194.0,163770,1989-01-01,2005-12-31,high,"comnam=REFCO INC, score=100"
+"SG Americas Securities, LLC",,,,,2011-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+Salomon Brothers Inc,SALOMON INC,27596.0,21556.0,008537,1960-01-01,1997-12-31,high,"comnam=SALOMON INC, score=100"
+Salomon Brothers Inc,TRAVELERS GROUP INC,59459.0,4293.0,009380,1997-01-01,1998-12-31,high,"comnam=TRAVELERS COMPANIES INC, score=100"
+"Sanwa-BGK Securities Co., L.P.",,,,,1991-01-01,2000-12-31,foreign_excluded,foreign or non-listed
+"Shearson Lehman Government Securities, Inc.",AMERICAN EXPRESS CO,59176.0,90.0,001447,1985-01-01,1994-12-31,high,"comnam=AMERICAN EXPRESS CO, score=100"
+"Smith Barney, Harris Upham & Co., Incorporated",PRIMERICA CORP,10241.0,22177.0,001414,1960-01-01,1997-12-31,high,"comnam=PRIMERICA CORP, score=100"
+Societe Generale,,,,,1985-01-01,1995-12-31,foreign_excluded,foreign or non-listed
+Sumitomo Securities (USA) Inc.,,,,,1986-01-01,1995-12-31,foreign_excluded,foreign or non-listed
+"Thomson McKinnon Securities, Inc.",,,,,1960-01-01,1989-12-31,foreign_excluded,foreign or non-listed
+UBS Securities LLC.,,,,,1990-01-01,2013-12-31,foreign_excluded,foreign or non-listed
+Westpac Banking Corp.,,,,,1985-01-01,1995-12-31,foreign_excluded,foreign or non-listed
+"Yamaichi International (America), Inc.",,,,,1988-01-01,1997-12-31,foreign_excluded,foreign or non-listed
+Zions First National Bank,ZIONS BANCORPORATION,84129.0,5057.0,011687,1989-01-01,2002-12-31,high,"comnam=ZIONS BANCORPORATION, score=100"

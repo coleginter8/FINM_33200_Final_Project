@@ -1,0 +1,21 @@
+[paths]
+data_raw       = "data/raw"
+data_processed = "data/processed"
+tables         = "tables"
+logs           = "logs"
+
+[api]
+# Empty string => use pandas-datareader's keyless FRED reader (and CSV fallbacks).
+fred_api_key = ""
+
+[sample]
+# Inclusive year ranges for Table 2 sub-periods.
+table2_periods = [[1960, 2012], [1960, 1990], [1990, 2012]]
+table3_start   = "1970Q1"
+table3_end     = "2012Q4"
+
+[wrds]
+# WRDS_USERNAME and WRDS_PASSWORD are read from .env / environment.
+host = "wrds-pgdata.wharton.upenn.edu"
+port = 9737
+db   = "wrds"

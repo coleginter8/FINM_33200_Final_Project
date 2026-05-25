@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python scripts/01_fetch_all.py)",
+      "Bash(.venv/bin/python -c ' *)"
+    ]
+  }
+}

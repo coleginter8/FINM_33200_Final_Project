@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hkm-replication"
+version = "0.1.0"
+description = "Replication of He, Kelly, Manela (2017 JFE) Tables 2 and 3"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "statsmodels>=0.14",
+    "linearmodels>=5.3",
+    "wrds>=3.2",
+    "pandas-datareader>=0.10",
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "lxml>=4.9",
+    "openpyxl>=3.1",
+    "xlrd>=2.0",
+    "pyarrow>=14",
+    "jinja2>=3.1",
+    "python-dotenv>=1.0",
+    "tomli>=2.0; python_version < '3.11'",
+    "rapidfuzz>=3.5",
+    "tqdm>=4.66",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
