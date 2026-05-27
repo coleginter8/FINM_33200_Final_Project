@@ -1,0 +1,48 @@
+# Python dependencies for FINM_33200_Final_Project
+# Union of packages imported in .py / .ipynb files and declared in the
+# pyproject.toml files of the four replication sub-projects:
+#   - CDS Replication StatsClaw
+#   - CDS Replication Vanila Claude
+#   - GSW Replication StatsClaw
+#   - GSW Replication Vanila Claude
+#   - HKM Replication StatsClaw
+#   - HKM Replication Vanila Claude
+#
+# Install with:  pip install -r requirements.txt
+
+# --- Core scientific stack ---
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+matplotlib
+seaborn
+
+# --- Econometrics / statistics ---
+statsmodels>=0.14
+linearmodels>=5.3
+
+# --- Financial / macro data sources ---
+pandas-datareader>=0.10
+wrds>=3.2
+requests>=2.31
+
+# --- Database connectivity ---
+sqlalchemy
+psycopg2-binary
+
+# --- File formats / parsing ---
+pyarrow>=14
+openpyxl>=3.1
+xlrd>=2.0
+beautifulsoup4>=4.12
+lxml>=4.9
+jinja2>=3.1
+
+# --- Utilities ---
+python-dotenv>=1.0
+rapidfuzz>=3.5
+tqdm>=4.66
+tomli>=2.0; python_version < "3.11"
+
+# --- Testing ---
+pytest>=7.4
