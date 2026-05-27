@@ -23,7 +23,7 @@ from pathlib import Path
 
 WORKDIR = Path('/Users/alexnikolaev/Desktop/finmath/spring_26/genai/final-project/cds_returns_claude-rep')
 PG = dict(host='wrds-pgdata.wharton.upenn.edu', port=9737, dbname='wrds',
-          user='alexnikolaev', password='721@ArcadiA2025',
+          user='alexnikolaev',
           sslmode='require', connect_timeout=60)
 
 TENORS = ['3Y', '5Y', '7Y', '10Y']
