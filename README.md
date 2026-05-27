@@ -106,6 +106,150 @@ Both StatsClaw and base Claude replications were run on **separate Claude accoun
 
 ---
 
+## Replication Instructions
+
+> **Note on path dependence:** AI responses are stochastic. Even with identical prompts and setup, rerunning either framework on the same account — or on a different account — will produce different intermediate decisions, different code, and potentially different numerical outputs. The artifacts in this repo represent single runs, not reproducible pipelines in the traditional sense. Treat them as case studies, not benchmarks.
+
+### Prerequisites
+
+- Python >= 3.10
+- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) (for StatsClaw replications)
+- WRDS credentials in `~/.pgpass` (for CDS and HKM replications)
+
+Install Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### Base Claude Replications
+
+Each Vanilla Claude folder contains the output of a single Claude Code plan-mode session. To reproduce the approach (not guaranteed to reproduce the exact output):
+
+1. Open a **fresh Claude account** to avoid contamination from other replication runs.
+2. Navigate to the relevant folder and open Claude Code.
+3. Pass the prompt below for the case you want to run.
+
+**Case 1 — GSW Federal Yield Curve (Base Claude prompt):**
+```
+Replicate the paper located in fed_yield_curve replication, reconstruct the dataset
+in the paper using tools or intrinsic knowledge and run the target evaluation script
+(evaluate_replication.py) to test the effectiveness of the replicated result.
+```
+
+**Case 2 — CDS Portfolio Returns (Base Claude prompt):**
+```
+Replicate the HKM (2017) CDS portfolio returns pipeline using the Palhares (2012)
+mark-to-market return methodology. Papers are hkm_2017.pdf and AQR CashFlow Maturity
+and Risk Premia in CDS Markets.pdf. Validation oracles are validation_portfolio.parquet
+(20 portfolios) and validation_contract.parquet (individual contracts). WRDS username
+is "[username]" and WRDS password is in ~/.pgpass. Deliverables:
+  ftsfr_cds_portfolio_returns.parquet — columns: ds (month-end date),
+    unique_id ({tenor}_Q{quintile}, e.g. 5Y_Q1), y (return) — 20 portfolios
+    (4 tenors × 5 quintiles), monthly
+  ftsfr_cds_contract_returns.parquet — columns: ds, unique_id ({ticker}_{tenor}),
+    y — individual contract returns, monthly
+If the methodology requires a discount curve or short-rate input, raise a HOLD and
+ask rather than assuming. Create a .md file keeping track of every decision you make
+during your replication process.
+```
+
+**Case 3 — HKM Tables 2 & 3 (Base Claude prompt):**
+```
+Replicate Tables 2 and 3 only from He, Kelly & Manela (2017), "Intermediary Asset
+Pricing: New Evidence from Many Asset Classes," JFE 126: 1–35. Paper is at
+hkm-paper.pdf. Target repo is project/hkm-replication. WRDS credentials are in ~/.env.
+```
+
+---
+
+### StatsClaw Replications
+
+StatsClaw requires Claude Code with the experimental agent teams feature enabled. Each StatsClaw folder already contains the framework files needed; the steps below describe how to set up a fresh instance from the `statsclaw/` source in this repo.
+
+#### One-time setup
+
+1. **Install Claude Code:**
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   ```
+
+2. **Create a project folder** at the same level as `statsclaw/` (e.g., `my-gsw-replication/`).
+
+3. **Copy framework files** from `statsclaw/` into your project folder:
+   ```
+   statsclaw/CLAUDE.md      → CLAUDE.md
+   statsclaw/agents/        → agents/
+   statsclaw/skills/        → skills/
+   statsclaw/profiles/      → profiles/
+   statsclaw/templates/     → templates/
+   statsclaw/settings.json  → settings.json
+   ```
+
+4. **Create `.claude/settings.json`** in your project folder:
+   ```json
+   {
+     "env": { "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1" },
+     "permissions": {
+       "allow": [
+         "Bash(python:*)", "Bash(pytest:*)", "Bash(git add:*)",
+         "Bash(git commit:*)", "Bash(git push:*)", "Bash(gh:*)",
+         "Bash(pip:*)", "Bash(find:*)", "Bash(ls:*)"
+       ]
+     }
+   }
+   ```
+
+5. **Place your paper PDFs** in a `papers/` subfolder and **validation oracles** in a `validation/` subfolder (validation files should be git-ignored — they are not committed).
+
+6. **Open Claude Code** from the project folder. The `CLAUDE.md` file will activate the StatsClaw leader agent automatically.
+
+#### Run prompts
+
+**Case 1 — GSW Federal Yield Curve (StatsClaw prompt):**
+```
+Construct the GSW (2007) daily zero-coupon Treasury yield curve dataset. Paper is at
+papers/gsw_2007.pdf. Validation oracle is at validation/validation_oracle.parquet —
+the tester may read it; the builder must not. Target repo is [username]/gsw-replication,
+workspace is [username]/workspace. Deliverable: a single parquet file with columns ds,
+unique_id (SVENY01–SVENY30), y (yield in percent), daily frequency, maximum coverage.
+Maintain evaluation.md. Start with the planner.
+```
+
+**Case 2 — CDS Portfolio Returns (StatsClaw prompt):**
+```
+Replicate the HKM (2017) CDS portfolio returns pipeline using the Palhares (2012)
+mark-to-market return methodology. Papers are at papers/hkm_2017.pdf and
+papers/AQR CashFlow Maturity and Risk Premia in CDS Markets.pdf. Validation oracles
+are at validation/validation_portfolio.parquet (20 portfolios) and
+validation/validation_contract.parquet (individual contracts) — the tester may read
+both; the builder must not. Target repo is [username]/cds-replication, workspace is
+[username]/workspace. WRDS credentials are in ~/.pgpass. Deliverables:
+  ftsfr_cds_portfolio_returns.parquet — columns: ds (month-end date),
+    unique_id ({tenor}_Q{quintile}, e.g. 5Y_Q1), y (return) — 20 portfolios
+    (4 tenors × 5 quintiles), monthly
+  ftsfr_cds_contract_returns.parquet — columns: ds, unique_id ({ticker}_{tenor}),
+    y — individual contract returns, monthly
+If the methodology requires a discount curve or short-rate input, raise a HOLD and
+ask rather than assuming. Maintain evaluation.md. Start with the planner.
+```
+
+**Case 3 — HKM Tables 2 & 3 (StatsClaw prompt):**
+```
+Replicate Tables 2 and 3 only from He, Kelly & Manela (2017), "Intermediary Asset
+Pricing: New Evidence from Many Asset Classes," JFE 126: 1–35. Paper is at
+hkm-paper.pdf. Validation oracle is at validation/validation_oracle.parquet — the
+tester may read it; the builder must not. Target repo is [username]/hkm-replication,
+workspace is [username]/workspace. WRDS credentials are in ~/.pgpass. No pre-specified
+GVKEYs or PERMNOs — identify primary dealers by name-matching the paper's appendix.
+Use a Z.1 aggregate splice for the 1970–1977 pre-WRDS gap. Maintain evaluation.md.
+Start with the planner.
+```
+
+---
+
 ## Conclusion
 
 The results were the opposite of expectations. StatsClaw's adversarial verification loop excels when the hard part of a replication is finding and cleaning already-published data — the planner identifies the right source, the builder fetches it, and independent tester verification catches data errors. For methodologically ambiguous replications, where success depends on sustained transparency about intermediate decisions, base Claude's plan-first approach proved more reliable.
