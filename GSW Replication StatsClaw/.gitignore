@@ -1,0 +1,11 @@
+.repos/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+.env
+.pgpass
+.DS_Store
+validation/validation_oracle.parquet

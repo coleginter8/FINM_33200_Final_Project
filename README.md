@@ -25,14 +25,50 @@ This project evaluates two AI-driven replication approaches, the StatsClaw multi
 
 ```
 FINM_33200_Final_Project/
-├── GSW Replication StatsClaw/      StatsClaw run: exact match (9/9 tests, 379,352 rows)
-├── GSW Replication Vanila Claude/  Base Claude run: full Svensson re-estimation approach
-├── CDS Replication StatsClaw/      StatsClaw run: correct formula, violated HOLD instruction
-├── CDS Replication Vanila Claude/  Base Claude run: better methodology, 97.4% contract match
-├── HKM Replication StatsClaw/      StatsClaw run: complete failure (wrong GVKEYs)
-├── HKM Replication Vanila Claude/  Base Claude run: 86-row dealer map, r=0.96 capital ratio
-├── statsclaw/                      StatsClaw framework source (agents, skills, profiles, templates)
-├── FINM 33200 Final Project Report (1).pdf   Full 18-page report
+├── GSW Replication StatsClaw/
+│   ├── .repos/gsw-replication/data/gsw_yield_curve.parquet   output — 379,352-row daily yields
+│   ├── statsclaw_workspace/runs/RUN-20260521-182205/          spec, test-spec, audit, review
+│   ├── evaluation.md / EVALUATION_RUBRIC.md                   grading files
+│   ├── report_figure.png                                       replicated vs oracle chart
+│   ├── agents/ skills/ profiles/ templates/                   StatsClaw framework
+│   └── papers/ validation/                                    source PDFs, oracle parquet
+│
+├── GSW Replication Vanila Claude/
+│   ├── replications/year_2024.csv                             replicated yield curve
+│   ├── methodology_decisions.md                               documented decisions
+│   └── evaluate_replication.py                                evaluation script
+│
+├── CDS Replication StatsClaw/
+│   ├── .repos/cds-replication/ftsfr_cds_portfolio_returns.parquet   20-portfolio output
+│   ├── .repos/cds-replication/ftsfr_cds_contract_returns.parquet    contract-level output
+│   ├── statsclaw_workspace/runs/cds-20260522-1354/            spec, test-spec, audit, mailbox, review
+│   ├── evaluation.md / EVALUATION_RUBRIC.md                   grading files
+│   ├── replication_summary.png                                 Pearson r heatmap
+│   └── agents/ skills/ profiles/ templates/ papers/ validation/
+│
+├── CDS Replication Vanila Claude/
+│   ├── ftsfr_cds_portfolio_returns.parquet                    20-portfolio output
+│   ├── ftsfr_cds_contract_returns.parquet                     contract-level output
+│   └── methodology_decisions.md                               documented decisions
+│
+├── HKM Replication StatsClaw/
+│   ├── hkm/                                                   Python package (compute_table2/3)
+│   ├── statsclaw_workspace/runs/run-20260520-hkm-tables-2-3/  spec, test-spec, audit, review
+│   ├── evaluation.md / EVALUATION_RUBRIC.md                   grading files
+│   ├── hkm_evaluation_chart.png                               cell-by-cell accuracy chart
+│   └── agents/ skills/ profiles/ templates/
+│
+├── HKM Replication Vanila Claude/
+│   ├── hkm-replication/                                       scripts, src, data
+│   ├── tables/table_2.csv  tables/table_3.csv                 replicated tables
+│   ├── hkm-replication/data/pd_to_permno_map.csv              86-row dealer map
+│   ├── evaluation_summary.png                                  color-coded accuracy chart
+│   └── make_evaluation_figure.py
+│
+├── statsclaw/                                                  StatsClaw framework source
+├── FINM 33200 Final Project Report.pdf                        full 18-page report
+├── FINM_33200_Final_Project_Report_static.html                static HTML version of report
+├── make_final_report_html_FIXED.py                            script that generates the HTML
 └── requirements.txt
 ```
 
@@ -260,7 +296,7 @@ The leading hypothesis for StatsClaw's underperformance on complex tasks is cont
 
 ## Full Report
 
-See [FINM 33200 Final Project Report (1).pdf](FINM%2033200%20Final%20Project%20Report%20(1).pdf) for the complete 18-page writeup including validation scorecards, methodology comparisons, and per-cell table evaluations.
+See [FINM 33200 Final Project Report.pdf](FINM%2033200%20Final%20Project%20Report.pdf) for the complete 18-page writeup including validation scorecards, methodology comparisons, and per-cell table evaluations.
 
 ---
 

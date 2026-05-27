@@ -130,3 +130,5 @@ He, Zhiguo, Bryan Kelly, and Asaf Manela. "Intermediary Asset Pricing: New Evide
 ## Architecture
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for a full description of the package structure, key formulas, WRDS tables used, data pipeline, and design decisions.
+
+---
